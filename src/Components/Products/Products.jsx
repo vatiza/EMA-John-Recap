@@ -1,9 +1,11 @@
+
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 import './Products.css'
 const Products = (props) => {
-    const { name, id, img, price, seller, ratings, quantity } = props.product;
+    const { name, id, img, price, seller, ratings, quantity, shipping } = props.product;
 
     const handleAddToCart = props.handleAddToCart;
 
@@ -16,7 +18,8 @@ const Products = (props) => {
                 <p className='product-seller'>Manufacturer: {seller}</p>
                 <p className='product-ratting'>Ratting: {ratings} star</p>
             </div>
-            <button onClick={() => { handleAddToCart(props.product.id) }} className='cart-btn' >
+
+            <button onClick={() => { handleAddToCart(props.product) }} className='cart-btn' >
                 Add to Cart
                 < FontAwesomeIcon icon={faShoppingCart} />
             </button>

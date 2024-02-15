@@ -1,0 +1,30 @@
+.cart {
+    height: 30%;
+    padding: 20px;
+    background-color: rgba(255, 153, 0, 0.30);
+    position: sticky;
+    top: 0;
+}
+
+.clear-btn {
+    width: 232px;
+    height: 48px;
+    border-radius: 4px;
+    background: #FF3030;
+    margin-bottom: 10px;
+}
+
+.review-btn {
+    width: 232px;
+    height: 48px;
+    border-radius: 4px;
+    background: #F90;
+}
+
+.clear-btn:hover {
+    background-color: red;
+}
+
+.review-btn:hover {
+    background: #F95;
+}
