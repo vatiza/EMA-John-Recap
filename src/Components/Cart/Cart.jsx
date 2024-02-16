@@ -1,17 +1,18 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = ({ cart }) => {
-    console.log(cart)
 
+    console.log(cart)
     let total = 0;
     let shipping = 0;
     for (const product of cart) {
         total = total + product.price;
         shipping = shipping + product.shipping;
-        console.log(total)
+
     }
     const tax = total * 3 / 100;
     const totalGrand = total + shipping + tax;
